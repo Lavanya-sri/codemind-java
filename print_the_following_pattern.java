@@ -3,16 +3,16 @@ class Prog
 {
     public static void main(String args[])
     {
-        int n,i,j;
+        int n;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
-        for(i=n;i>=1;i--)
+        for(int i=n-1;i>=0;i--)
         {
-            for(j=1;j<=i;j++)
+            for(int j=0;j<=i;j++)
             {
-                System.out.print(j);
+                System.out.print((char)(i+65)+" ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
