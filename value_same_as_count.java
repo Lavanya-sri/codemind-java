@@ -1,38 +1,41 @@
-import java.util.Scanner;
-class Minimum
+import java.util.*;
+class prog
 {
     public static void main(String args[])
     {
-        int n,count=0,countt=0,sum=0,y=0;
-        float avrg;
         Scanner sc=new Scanner(System.in);
+        int n,i;
         n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
         {
             arr[i]=sc.nextInt();
         }
-        for(int i=0;i<n;i++)
+        int count=0,y=0,c=0;
+        for(i=0;i<n;i++)
         {
-           count=1;
-           if(arr[i]==-1)
-           {
-               continue;
-           }
-           for(int j=i+1;j<n;j++)
-           {
-               if(arr[i]==arr[j])
-               {
-                   count++;
-                   arr[j]=-1;
-               }
-           }
-           if(arr[i]==count)
-           {
-               countt++;
-           }
+            count=1;
+            if(arr[i]==-1)
+            {
+                continue;
+            }
+            else
+            {
+                for(int j=i+1;j<n;j++)
+                {
+                    if(arr[i]==arr[j])
+                    {
+                        count++;
+                        arr[j]=-1;
+                    }
+                }
+            }
+            if(count==arr[i])
+            {
+                y=1;
+                c++;
+            }
         }
-        System.out.print(countt);
-        sc.close();
+        System.out.print(c);
     }
 }
