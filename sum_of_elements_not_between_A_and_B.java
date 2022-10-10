@@ -1,9 +1,9 @@
 import java.util.Scanner;
-class Minimum
+class Prog
 {
     public static void main(String args[])
     {
-        int n,count=0,countt=0,sum=0,y=0;
+        int n,c=0,count=0,sum=0;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
         int[] arr=new int[n];
