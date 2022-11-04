@@ -7,13 +7,20 @@ class Prog
         int n=sc.nextInt();
         for(int i=1;i<=n;i++)
         {
-            for(int k=n;k>i;k--)
+            for(int j=1;j<=n;j++)
             {
-                System.out.print(" ");
+               if(j>n-2)
+               {
+                   continue;
+               }
+               else
+               {
+                   System.out.print(j);
+               }
             }
-            for(int j=1;j<2*i;j++)
+            for(int j=n-3;j>=1;j--)
             {
-                System.out.print(i);
+                System.out.print(j);
             }
             System.out.println();
         }
